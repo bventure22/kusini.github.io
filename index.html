@@ -3,96 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kusini Tours and Safaris | Explore Tanzania</title>
+    <title>Kusini Tours and Safaris</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav class="navbar">
         <div class="logo">KUSINI TOURS</div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
         <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Destinations</a></li>
-            <li><a href="#">Tours</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#tours">Tours</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
         </ul>
     </nav>
 
-    <header class="hero">
+    <header class="hero" id="home">
         <div class="hero-content">
             <h1>Welcome to KUSINI TOURS</h1>
             <p>Explore More and Book Your Trip Now</p>
-            <div class="promo-badge">Dream Come True - 30% Discount</div>
-            <a href="#" class="btn">Book Now</a>
+            <div class="promo">Dream Come True - 30% Discount</div>
+            <button class="btn-main">View Safaris</button>
         </div>
     </header>
 
-    <section class="about-section">
+    <section class="about" id="about">
         <h2>About Kusini Tours And Safaris</h2>
-        <p class="tagline">OFFERING INCLUSIVE TRAVEL EXPERIENCES TO THE PUBLIC DIRECTLY OR THROUGH AGENTS</p>
-        <div class="about-grid">
-            <div class="about-text">
-                <p>Kusini tours will strive to provide exceptional experiences and create unforgettable memories for our valued customers. Whether you're seeking thrilling wildlife encounters, breath-taking hikes, immersive cultural encounters, or relaxing beach getaways, Kusini Tours will be there to cater to your needs.</p>
-                <p>Additionally, we take pride in showcasing unique and off-the-beaten-path attractions that are not typically included in traditional itineraries.</p>
-            </div>
-            <div class="mission-box">
-                <h3>Our Mission</h3>
-                <p>To be the leading provider of diverse travel experiences... creating extraordinary journeys that ignite a sense of wonder and cultivate a profound appreciation for natural wonders and cultural heritage.</p>
-            </div>
+        <h3>OFFERING INCLUSIVE TRAVEL EXPERIENCES TO THE PUBLIC</h3>
+        <p>Kusini tours will strive to provide exceptional experiences and create unforgettable memories for our valued customers. Whether you're seeking thrilling wildlife encounters, breath-taking hikes, or relaxing beach getaways, we are here for you.</p>
+        
+        <div class="mission">
+            <h4>Our Mission</h4>
+            <p>To be the leading provider of diverse travel experiences, creating extraordinary journeys that ignite a sense of wonder and cultivate a profound appreciation for natural wonders and conservation.</p>
         </div>
     </section>
 
-    <section class="tours-section">
-        <h2 class="section-title">Our Tourism Packages</h2>
-        <div class="card-container">
+    <section class="tours" id="tours">
+        <h2 class="section-title">Our Safari Packages</h2>
+        <div class="card-grid">
             <div class="card">
-                <div class="card-img" style="background-color: #2e7d32;"></div>
-                <div class="card-body">
-                    <h3>3 Days 2 Nights Fly-In Safari</h3>
+                <div class="card-info">
+                    <h3>3 Days 2 Nights Fly-In</h3>
                     <p>Zanzibar to Nyerere National Park</p>
-                    <button class="card-btn">View Details</button>
+                    <button class="btn-card">Book Now</button>
                 </div>
             </div>
             <div class="card">
-                <div class="card-img" style="background-color: #ef6c00;"></div>
-                <div class="card-body">
+                <div class="card-info">
                     <h3>4 Days 3 Nights</h3>
                     <p>Mikumi & Udzungwa National Park</p>
-                    <button class="card-btn">View Details</button>
+                    <button class="btn-card">Book Now</button>
                 </div>
             </div>
             <div class="card">
-                <div class="card-img" style="background-color: #1565c0;"></div>
-                <div class="card-body">
-                    <h3>5 Days 4 Nights Safari</h3>
+                <div class="card-info">
+                    <h3>5 Days 4 Nights</h3>
                     <p>Dar es Salaam - Morogoro - Mikumi - Ruaha</p>
-                    <button class="card-btn">View Details</button>
+                    <button class="btn-card">Book Now</button>
                 </div>
             </div>
             <div class="card">
-                <div class="card-img" style="background-color: #4e342e;"></div>
-                <div class="card-body">
-                    <h3>8 Days Safari & Hiking</h3>
-                    <p>Southern Tanzania Explorer: Nyerere to Ruaha via Mikumi</p>
-                    <button class="card-btn">View Details</button>
+                <div class="card-info">
+                    <h3>8 Days Southern Explorer</h3>
+                    <p>Nyerere to Ruaha via Mikumi & Udzungwa</p>
+                    <button class="btn-card">Book Now</button>
                 </div>
             </div>
             <div class="card">
-                <div class="card-img" style="background-color: #37474f;"></div>
-                <div class="card-body">
+                <div class="card-info">
                     <h3>9 Days 8 Nights Safari</h3>
-                    <p>Southern Tanzania Deep Discovery Experience</p>
-                    <button class="card-btn">View Details</button>
+                    <p>Southern Tanzania Deep Discovery</p>
+                    <button class="btn-card">Book Now</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 Kusini Tours and Safaris. All Rights Reserved.</p>
-    </footer>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
