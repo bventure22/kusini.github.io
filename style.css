@@ -1,124 +1,83 @@
-/* General Styles */
-html {
-    scroll-behavior: smooth;
-}
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
 }
 
-body {
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
-}
-
-/* Navigation */
+/* Mobile-First Navigation */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #1a2e1a;
+    background: #2d4628;
     color: white;
-    padding: 1rem 5%;
+    padding: 15px 5%;
     position: sticky;
     top: 0;
-    z-index: 1000;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    letter-spacing: 2px;
+    z-index: 100;
 }
 
 .nav-links {
-    display: flex;
+    display: none; /* Hidden on mobile by default */
     list-style: none;
 }
 
-.nav-links li a {
-    color: white;
-    text-decoration: none;
-    padding: 0 15px;
-    transition: 0.3s;
+.nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #2d4628;
+    padding: 20px;
 }
 
-.nav-links li a:hover {
-    color: #ffcc00;
+.nav-links li { margin: 10px 0; }
+.nav-links a { color: white; text-decoration: none; font-weight: bold; }
+
+/* Hamburger Menu Icon */
+.menu-toggle {
+    cursor: pointer;
+}
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background: white;
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1516422213484-21437ef3367a?auto=format&fit=crop&w=1350&q=80'); /* Placeholder image */
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1516422213484-21437ef3367a?q=80&w=2000');
     background-size: cover;
     background-position: center;
-    height: 70vh;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
+    padding: 20px;
 }
 
-.hero h1 { font-size: 3.5rem; margin-bottom: 10px; }
-
-.promo-badge {
-    background: #d32f2f;
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin: 20px 0;
-    font-weight: bold;
-}
-
-.btn {
-    display: inline-block;
-    background: #ffcc00;
-    color: #1a2e1a;
-    padding: 12px 30px;
-    text-decoration: none;
-    font-weight: bold;
+.promo {
+    background: #e67e22;
+    padding: 10px;
+    margin: 15px 0;
     border-radius: 5px;
 }
 
 /* About Section */
-.about-section {
-    padding: 50px 10%;
-    background: white;
-}
+.about { padding: 40px 5%; line-height: 1.6; }
+.mission { background: #f4f4f4; padding: 20px; border-left: 5px solid #2d4628; margin-top: 20px; }
 
-.tagline {
-    font-weight: bold;
-    color: #2e7d32;
-    margin-bottom: 20px;
-}
-
-.about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-}
-
-.mission-box {
-    background: #f0f4f0;
-    padding: 20px;
-    border-left: 5px solid #2e7d32;
-}
-
-/* Tours Section */
-.tours-section {
-    padding: 50px 5%;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.card-container {
+/* Service Cards */
+.tours { padding: 40px 5%; background: #f9f9f9; }
+.card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
@@ -126,35 +85,25 @@ body {
 
 .card {
     background: white;
-    border-radius: 10px;
+    border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-bottom: 4px solid #2d4628;
 }
 
-.card:hover { transform: translateY(-5px); }
-
-.card-img { height: 180px; }
-
-.card-body { padding: 20px; }
-
-.card-body h3 { font-size: 1.2rem; margin-bottom: 10px; color: #1a2e1a; }
-
-.card-btn {
-    margin-top: 15px;
+.card-info { padding: 20px; }
+.btn-card {
     width: 100%;
     padding: 10px;
+    margin-top: 10px;
     border: none;
-    background: #2e7d32;
+    background: #2d4628;
     color: white;
     cursor: pointer;
-    border-radius: 4px;
 }
 
-footer {
-    background: #1a2e1a;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+/* Desktop View Adjustments */
+@media (min-width: 768px) {
+    .menu-toggle { display: none; }
+    .nav-links { display: flex; gap: 20px; }
 }
